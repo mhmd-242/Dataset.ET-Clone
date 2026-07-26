@@ -16,7 +16,7 @@
 }
 body {
     background-color: var(--bg-primary);
-    padding-top: 22dvh;
+    padding-top: clamp(8rem, 22vh, 12rem);
 }
 header {
     position: fixed;
@@ -27,12 +27,12 @@ header {
 }
 header nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 1rem clamp(0.8rem, 5vw, 9.5rem);
     border: 0.5px solid var(--border);
     border-radius: 200px;
-    padding: 0.5rem 0;
+    padding: 0.5rem 1.5rem;
     background-color: var(--bg-primary);
     opacity: 0.97;
 }
@@ -71,8 +71,9 @@ header nav .cta a:first-child:hover {
     color: var(--font-color-secondary);
 }
 header nav .cta .mode{
-    height: 1.75rem;
-    width: 1.75rem;
+    color: var(--font-color-primary);
+    height: 2.2rem;
+    width: 2.2rem;
     background-color: var(--bg-secondary);
     border: 1px solid var(--border);
     border-radius: 9px;
@@ -80,29 +81,39 @@ header nav .cta .mode{
     justify-content: center;
     align-items: center;
 }
-header nav .cta a:last-child {
-    height: 1.75rem;
-    width: 9rem;
+header nav .cta .mode svg {
+    width: 1rem;
+}
+header nav .cta div a {
+    height: 2.5rem;
+    width: 8rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 0.5rem;
-    color: var(--font-color-secondary);
     text-decoration: none;
     border: 1px solid var(--border);
     border-radius: 20px;
-    padding: 0 1rem;
+    padding: 0 0.8rem;
     background-color: var(--bg-tertiary);
 }
-header nav .cta a p {
+header nav .cta div a p {
     font-size: 0.9rem;
+    color: var(--font-color-secondary);
 }
-header nav .cta a img  {
-    width: 1.2rem;
+header nav .cta div a svg  {
+    width: 1rem;
     transition: .3s all ease;
+    color: var(--font-color-secondary);
 }
-header nav .cta a:last-child:hover img{
+header nav .cta div a:hover svg{
     transform: translate(2px, -2px);
+}
+header nav .cta .burger {
+    color: var(--font-color-primary);
+    display: none;
+}
+header nav .cta .burger svg {
+    width: 2rem;
 }
 .section1 {
     margin: 0 clamp(1.25rem, 5vw, 9.5rem);
@@ -153,13 +164,14 @@ header nav .cta a:last-child:hover img{
     color: var(--font-color-tertiary);
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    justify-content: space-between;
+    gap: 0.8rem;
 }
-.section1 .section1-wrapper .parent1 .c2 ul li:first-child a img {
+.section1 .section1-wrapper .parent1 .c2 ul li:first-child a svg {
     width: 1rem;
     transition: .3s all ease;
 }
-.section1 .section1-wrapper .parent1 .c2 ul li:first-child a:hover img {
+.section1 .section1-wrapper .parent1 .c2 ul li:first-child a:hover svg {
     transform: translateX(2px);
 }
 .section1 .section1-wrapper .parent1 .c2 ul li:last-child a {
@@ -173,7 +185,6 @@ header nav .cta a:last-child:hover img{
     margin: clamp(1rem, 10vw, 3.5rem) 0;
     display: flex;
     gap: 2rem;
-    color: var(--font-color-primary);
 }
 .section1 .section1-wrapper .parent1 .c3 h3 {
     font-size: clamp(1.1rem, 1.5vw, 1.5rem);
@@ -231,11 +242,17 @@ header nav .cta a:last-child:hover img{
     background-color: var(--bg-secondary);
     padding: 2rem;
 }
-.section2 .section2-wrapper .parent2 > div img {
-    border: 1px solid var(--border);
-    background-color: var(--bg-tertiary);
+.section2 .section2-wrapper .parent2 > div .img-wrapper {
+    height: 2.5rem;
+    width: 2.5rem;
     border-radius: 10px;
-    padding: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-tertiary);
+}
+.section2 .section2-wrapper .parent2 > div .img-wrapper svg {
+    color: var(--font-color-secondary);
 }
 .section2 .section2-wrapper .parent2 > div h6 {
     color: var(--font-color-primary);
@@ -282,20 +299,20 @@ header nav .cta a:last-child:hover img{
     margin-bottom: 1.5rem;
 }
 .section3 .section3-wrapper .parent2 > div {
-    padding: 1.5rem 1.3rem;
+    padding: 2rem 1.8rem;
     background-color: var(--bg-secondary);
     border: 1px solid var(--border);
-    border-radius: 1.5rem;
+    border-radius: 12px;
     transition: .3s all ease;
 }
 .section3 .section3-wrapper .parent2 > div > p {
     color: var(--font-color-quinary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 .section3 .section3-wrapper .parent2 > div .lang {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 .section3 .section3-wrapper .parent2 > div .lang div:first-child p:first-child {
     margin-bottom: 0.3rem;
@@ -324,8 +341,6 @@ header nav .cta a:last-child:hover img{
 .section3 .section3-wrapper .parent2 > div:hover {
     background-color: var(--font-color-quaternary);
     transform: translateY(-5px);
-}
-.section3 .section3-wrapper .parent2 > div:hover {
     border: 1px solid var(--font-color-secondary);
 }
 .section3 .section3-wrapper .parent2 > div:hover .info p {
@@ -361,7 +376,7 @@ header nav .cta a:last-child:hover img{
 .section4 .section4-wrapper .parent2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    gap: 0.8rem;
 }
 .section4 .section4-wrapper .parent2 .child {
     display: flex;
@@ -376,14 +391,17 @@ header nav .cta a:last-child:hover img{
     line-height: 1.6;
 }
 .section4 .section4-wrapper .parent2 .child .icon{
-    width: 64px;
-    height: 64px;
+    width: 5rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--bg-tertiary);
     border: 1px solid var(--border);
     border-radius: 16px;
+}
+.section4 .section4-wrapper .parent2 .child .icon svg {
+    color: var(--font-color-secondary);
 }
 .section4 .section4-wrapper .parent2 .child .nn {
     width: 32px;
@@ -432,7 +450,6 @@ header nav .cta a:last-child:hover img{
     margin-bottom: 1rem;
 }
 .section5 .section5-wrapper .parent1 h3 span{
-    font-size: 2.5rem;
     color: var(--font-color-secondary);
 }
 .section5 .section5-wrapper .parent1 p:nth-child(3) {
@@ -453,10 +470,13 @@ header nav .cta a:last-child:hover img{
     height: 40px;
     transition: .3s all ease;
 }
-.section5 .section5-wrapper .parent1 a:hover {
-    transform: scale(1.1);
+.section5 .section5-wrapper .parent1 a svg {
+    width: 1rem;
 }
-.section5 .section5-wrapper .parent1 a:hover img {
+.section5 .section5-wrapper .parent1 a:hover {
+    transform: scale(1.03);
+}
+.section5 .section5-wrapper .parent1 a:hover svg {
     transform: translate(2px, -2px);
 }
 .section5 .section5-wrapper .parent2 {
@@ -474,7 +494,7 @@ header nav .cta a:last-child:hover img{
     gap: 1rem;
     transition: .3s all ease;
 }
-.section5 .section5-wrapper .parent2 > div div:has(img) {
+.section5 .section5-wrapper .parent2 > div .img-wrapper {
     width: 50px;
     height: 50px;
     display: flex;
@@ -482,6 +502,9 @@ header nav .cta a:last-child:hover img{
     align-items: center;
     background-color: var(--bg-tertiary);
     border-radius: 1rem;
+}
+.section5 .section5-wrapper .parent2 > div .img-wrapper svg {
+    color: var(--font-color-secondary);
 }
 .section5 .section5-wrapper .parent2 > div h3 {
     color: var(--font-color-primary);
@@ -493,7 +516,10 @@ header nav .cta a:last-child:hover img{
     transform: scale(1.05) translateY(-5px);
     border: 1px solid var(--font-color-secondary);
 }
-.section5 .section5-wrapper .parent2 > div:hover div:has(img) {
+.section5 .section5-wrapper .parent2 > div:hover .img-wrapper svg {
+    color: var(--font-color-tertiary);
+}
+.section5 .section5-wrapper .parent2 > div:hover div:has(svg) {
     background-color: var(--font-color-secondary);
 }
 .section6 {
@@ -546,7 +572,10 @@ header nav .cta a:last-child:hover img{
     transition: .2s all ease;
     margin-bottom: 1.7rem;
 }
-.section6 .section6-wrapper div > a:hover img {
+.section6 .section6-wrapper div > a svg {
+    width: 1rem;
+}
+.section6 .section6-wrapper div > a:hover svg {
     transform: translateX(2px);
 }
 .section6 .section6-wrapper div p:last-child {
@@ -595,15 +624,16 @@ footer .footer-wrapper .parent1 > div:last-child ul a {
     color: var(--font-color-quinary);
     font-size: 1rem;
 }
-footer .footer-wrapper .parent1 > div:last-child ul a:has(img) {
+footer .footer-wrapper .parent1 > div:last-child ul a:has(svg) {
     display: flex;
     align-items: center;
     gap: 0.2rem;
     text-decoration: none;
     color: var(--font-color-quinary);
 }
-footer .footer-wrapper .parent1 > div:last-child ul a:has(img) img {
-    width: 1.3rem;
+footer .footer-wrapper .parent1 > div:last-child ul a:has(svg) svg {
+    width: 1.1rem;
+    transform: translateY(-2px);
 }
 footer .footer-wrapper .parent1 > div:last-child ul a:hover {
     color: var(--font-color-primary);
@@ -625,33 +655,38 @@ footer .footer-wrapper .parent2 p a:hover {
     color: var(--font-color-secondary);
 }
 @media (max-width: 1023px) {
+    header nav .links {
+        display: none;
+    }
+    header nav .cta .dd {
+        display: none;
+    }
+    header nav .cta .burger {
+        display: flex;
+        justify-content: center;
+    }
     .section1 .section1-wrapper {
-        display: grid;
         grid-template-columns: 1fr;
     }
     .section1 .section1-wrapper .parent2 .animation {
         display: none;
     }
     .section2 .section2-wrapper .parent2 {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
     .section3 .section3-wrapper .parent2 {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
     }
     .section4 .section4-wrapper .parent2 {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
     .section4 .section4-wrapper .parent2 .child:not(:last-child)::after {
-        width: 0;
+        display: none;
     }
     .section5 .section5-wrapper {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
@@ -659,12 +694,10 @@ footer .footer-wrapper .parent2 p a:hover {
         position: static;
     }
     .section5 .section5-wrapper .parent2 {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
     }
     footer .footer-wrapper .parent1 {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -681,17 +714,18 @@ footer .footer-wrapper .parent2 p a:hover {
     }
 }
 @media (max-width: 639px) {
-    .section1 .section1-wrapper {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
     .section3 .section3-wrapper .parent2 {
-        display: grid;
         grid-template-columns: 1fr;
     }
     .section4 .section4-wrapper .parent2 {
-        display: grid;
         grid-template-columns: 1fr;
     }
     
+}
+@media (max-width: 456px) {
+    .section1 .section1-wrapper .parent1 .c2 ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }
