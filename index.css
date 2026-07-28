@@ -22,7 +22,12 @@ body {
     background-color: var(--bg-primary);
     padding-top: clamp(8rem, 22vh, 12rem);
 }
-
+h1 , h3 , h6 {
+    font-family: "Outfit" , sans-serif;
+}
+p {
+    font-family: "Inter", serif;
+}
 header {
     position: fixed;
     top: 0;
@@ -42,9 +47,11 @@ header nav {
     background-color: var(--bg-primary);
     opacity: 0.97;
 }
-
+header nav .logo {
+    filter: invert(1);
+}
 header nav .logo img {
-    width: clamp(6rem, 15vw, 10rem);
+    width: clamp(4rem, 12vw, 8rem);
 }
 
 header nav .links ul {
@@ -450,6 +457,7 @@ header nav .cta .burger svg {
 
 .section4 {
     background-color: var(--bg-secondary);
+    font-family: sans-serif;
 }
 
 .section4 .section4-wrapper {
@@ -744,7 +752,9 @@ footer .footer-wrapper .parent1 {
     grid-template-columns: 1fr 2fr;
     margin-bottom: clamp(2rem, 6vw, 4rem);
 }
-
+footer .footer-wrapper .parent1 div:first-child {
+    filter: invert(1);
+}
 footer .footer-wrapper .parent1 div>img {
     width: clamp(8rem, 20vw, 16rem);
 }
