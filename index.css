@@ -9,7 +9,6 @@
     --font-color-quinary: #69697D;
     --border: #1a1a2a;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +24,7 @@ body {
 h1 , h3 , h6 {
     font-family: "Outfit" , sans-serif;
 }
-p {
+p , a{
     font-family: "Inter", serif;
 }
 header {
@@ -35,15 +34,14 @@ header {
     right: 0;
     z-index: 1000;
 }
-
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem clamp(0.8rem, 5vw, 9.5rem);
+    margin: 1rem clamp(1.25rem, 10vw - 3rem, 12rem);
     border: 0.5px solid var(--border);
     border-radius: 200px;
-    padding: 0.5rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     background-color: var(--bg-primary);
     opacity: 0.97;
 }
@@ -51,46 +49,43 @@ header nav .logo {
     filter: invert(1);
 }
 header nav .logo img {
-    width: clamp(4rem, 12vw, 8rem);
+    width: clamp(4rem, 12vw, 9rem);
 }
-
 header nav .links ul {
     display: flex;
     align-items: center;
     list-style: none;
 }
-
 header nav .links ul li a {
     display: inline-block;
     padding: 0.55rem 1.125rem;
     text-decoration: none;
     color: var(--font-color-primary);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
-
 header nav .links a:hover {
     background-color: var(--border);
     border-radius: 1.25rem;
 }
-
 header nav .cta {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 0.5rem;
 }
-
+header nav .cta a {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
 header nav .cta a:first-child {
     text-decoration: none;
     color: var(--font-color-primary);
     padding-right: 1rem;
-    font-size: 0.9rem;
 }
-
 header nav .cta a:first-child:hover {
     color: var(--font-color-secondary);
 }
-
 header nav .cta .mode {
     color: var(--font-color-primary);
     height: 2.2rem;
@@ -102,15 +97,12 @@ header nav .cta .mode {
     justify-content: center;
     align-items: center;
 }
-
 header nav .cta .mode svg {
     width: 1rem;
 }
-
 header nav .cta .mode:hover {
     background-color: var(--bg-tertiary);
 }
-
 header nav .cta div a {
     height: 2.5rem;
     width: 8rem;
@@ -123,54 +115,44 @@ header nav .cta div a {
     padding: 0 0.8rem;
     background-color: var(--bg-tertiary);
 }
-
 header nav .cta div a p {
-    font-size: 0.9rem;
     color: var(--font-color-secondary);
 }
-
 header nav .cta div a svg {
     width: 1rem;
     transition: .3s all ease;
     color: var(--font-color-secondary);
 }
-
 header nav .cta div a:hover svg {
     transform: translate(2px, -2px);
 }
-
 header nav .cta .burger {
     color: var(--font-color-primary);
     display: none;
 }
-
 header nav .cta .burger svg {
     width: 2rem;
 }
-
-.section1 {
-    margin: 0 clamp(1.25rem, 5vw, 9.5rem);
-}
-
 .section1 .section1-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 0 clamp(1.25rem, 10vw - 3rem, 12rem);
+    margin-bottom: clamp(2.5rem, 14.5vw - 4vw, 10.5rem);
 }
-
 .section1 .section1-wrapper .parent1 .top {
     color: var(--font-color-secondary);
     border: 1px solid var(--border);
     border-radius: 20px;
     display: inline-block;
     padding: 0.6rem 0.6rem;
-    font-size: 0.9rem;
     background-color: var(--bg-tertiary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
-
 .section1 .section1-wrapper .parent1 .c1 {
     margin: 2rem 0;
 }
-
 .section1 .section1-wrapper .parent1 .c1 h1 {
     font-size: clamp(2rem, 6vw, 4rem);
     color: var(--font-color-primary);
@@ -178,18 +160,15 @@ header nav .cta .burger svg {
     margin-bottom: 1rem;
     max-width: 600px;
 }
-
 .section1 .section1-wrapper .parent1 .c1 h1 span {
     color: var(--font-color-secondary);
 }
-
-.section1 .section1-wrapper .parent1 .c1 h3 {
+.section1 .section1-wrapper .parent1 .c1 p {
     color: var(--font-color-quinary);
     font-size: clamp(1rem, 1.25vw, 1.125rem);
     max-width: 450px;
     line-height: 1.4;
 }
-
 .section1 .section1-wrapper .parent1 .c2 ul {
     list-style: none;
     display: flex;
@@ -200,27 +179,25 @@ header nav .cta .burger svg {
     border-radius: 30px;
     font-size: 0.9rem;
 }
-
 .section1 .section1-wrapper .parent1 .c2 ul li:first-child a {
     background-color: var(--font-color-secondary);
     color: var(--font-color-tertiary);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 0.5rem;
     width: 180px;
     height: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
-
 .section1 .section1-wrapper .parent1 .c2 ul li:first-child a svg {
     width: 1rem;
     transition: .3s all ease;
 }
-
 .section1 .section1-wrapper .parent1 .c2 ul li:first-child a:hover svg {
     transform: translateX(2px);
 }
-
 .section1 .section1-wrapper .parent1 .c2 ul li:last-child a {
     border: 1px solid var(--border);
     color: var(--font-color-quinary);
@@ -229,46 +206,41 @@ header nav .cta .burger svg {
     align-items: center;
     width: 180px;
     height: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
-
 .section1 .section1-wrapper .parent1 .c2 ul li:last-child a:hover {
     color: var(--font-color-primary);
 }
-
 .section1 .section1-wrapper .parent1 .c3 {
     margin: clamp(1rem, 10vw, 3.5rem) 0;
     display: flex;
     gap: 2rem;
 }
-
 .section1 .section1-wrapper .parent1 .c3 h3 {
     font-size: clamp(1.1rem, 1.5vw, 1.5rem);
     color: var(--font-color-primary);
     margin-bottom: 0.4rem;
 }
-
 .section1 .section1-wrapper .parent1 .c3 p {
     color: var(--font-color-quinary);
     font-size: 0.9rem;
 }
-
 .section1 .section1-wrapper .parent2 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .section1 .section1-wrapper .parent2 .animation {
     width: clamp(10rem, 36vw, 21.25rem);
     height: clamp(10rem, 36vw, 21.25rem);
     background-color: var(--font-color-secondary);
     border-radius: 50%;
 }
-
-.section2 {
-    margin: clamp(2.5rem, 5vw, 4.5rem) clamp(1.25rem, 5vw, 9.5rem);
+.section2 .section2-wrapper{
+    margin: 0 clamp(1.25rem, 8.5vw - 2.5rem, 10.5rem);
+    margin-bottom: clamp(2.5rem, 22vw - 4vw, 20rem);
 }
-
 .section2 .section2-wrapper .parent1 {
     margin: 2rem 0;
     display: flex;
@@ -276,47 +248,41 @@ header nav .cta .burger svg {
     align-items: center;
     text-align: center;
 }
-
 .section2 .section2-wrapper .parent1 p:first-child {
     color: var(--font-color-secondary);
     margin-bottom: 0.8rem;
-    font-size: 0.95rem;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
-
 .section2 .section2-wrapper .parent1 h3 {
     font-size: clamp(1.5rem, 2.8vw, 5rem);
 }
-
 .section2 .section2-wrapper .parent1 .white {
     color: var(--font-color-primary);
 }
-
 .section2 .section2-wrapper .parent1 .purple {
     color: var(--font-color-secondary);
     margin-bottom: 1rem;
 }
-
 .section2 .section2-wrapper .parent1 p:last-child {
     color: var(--font-color-quinary);
     margin-bottom: clamp(2rem, 3vw, 4rem);
     max-width: 450px;
     line-height: 1.3;
 }
-
 .section2 .section2-wrapper .parent2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
 }
-
-.section2 .section2-wrapper .parent2>div {
+.section2 .section2-wrapper .parent2 > div {
     border: 1px solid var(--border);
     border-radius: 16px;
     background-color: var(--bg-secondary);
     padding: 2rem;
 }
-
-.section2 .section2-wrapper .parent2>div .img-wrapper {
+.section2 .section2-wrapper .parent2 > div .img-wrapper {
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 10px;
@@ -325,175 +291,156 @@ header nav .cta .burger svg {
     align-items: center;
     background-color: var(--bg-tertiary);
 }
-
-.section2 .section2-wrapper .parent2>div .img-wrapper svg {
+.section2 .section2-wrapper .parent2 > div .img-wrapper svg {
     color: var(--font-color-secondary);
 }
-
-.section2 .section2-wrapper .parent2>div h6 {
+.section2 .section2-wrapper .parent2 > div h6 {
     color: var(--font-color-primary);
     font-size: 1.2rem;
     margin: 1.2rem 0;
 }
-
-.section2 .section2-wrapper .parent2>div p {
+.section2 .section2-wrapper .parent2 > div p {
     color: var(--font-color-quinary);
     font-size: 0.9rem;
     margin-bottom: 2rem;
-    max-width: 325px;
     line-height: 1.6;
 }
-
-.section2 .section2-wrapper .parent2>div p:last-child {
+.section2 .section2-wrapper .parent2 > div p:last-child {
     padding-top: 2rem;
     margin-bottom: 0;
     border-top: 1px solid var(--border);
 }
-
-.section2 .section2-wrapper .parent2>div p strong {
+.section2 .section2-wrapper .parent2 > div p strong {
     font-size: 1.5rem;
+    color: var(--font-color-secondary);
+    font-family: "Outfit" , sans-serif;
 }
-
-.section3 {
-    margin: 0 clamp(1.25rem, 5vw, 9.5rem);
-    margin-top: 2rem;
+.section3 .section3-wrapper{
+    margin: 0 clamp(1.25rem, 8.5vw - 2.5rem, 10.5rem);
+    margin-bottom: clamp(2.5rem, 14vw - 4vw, 14rem);
 }
-
 .section3 .section3-wrapper .parent1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-
 .section3 .section3-wrapper .parent1 p:first-child {
     color: var(--font-color-secondary);
     margin-bottom: 1rem;
+    letter-spacing: 2px;
+    font-size: 0.7rem;
+    font-weight: 600;
 }
-
 .section3 .section3-wrapper .parent1 h3 {
     color: var(--font-color-primary);
     font-size: 2.2rem;
     margin-bottom: 1rem;
     max-width: 400px;
 }
-
 .section3 .section3-wrapper .parent1 p:last-child {
     color: var(--font-color-quinary);
     margin-bottom: clamp(2rem, 4vw, 4rem);
     max-width: 600px;
 }
-
 .section3 .section3-wrapper .parent2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: min(1vw, 1rem);
     margin-bottom: 1.5rem;
 }
-
-.section3 .section3-wrapper .parent2>div {
+.section3 .section3-wrapper .parent2 > div {
     padding: 2rem 1.8rem;
     background-color: var(--bg-secondary);
     border: 1px solid var(--border);
     border-radius: 12px;
     transition: .3s all ease;
 }
-
-.section3 .section3-wrapper .parent2>div>p {
+.section3 .section3-wrapper .parent2 > div > p {
     color: var(--font-color-quinary);
     margin-bottom: 1.2rem;
 }
-
-.section3 .section3-wrapper .parent2>div .lang {
+.section3 .section3-wrapper .parent2 > div .lang {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.2rem;
 }
-
-.section3 .section3-wrapper .parent2>div .lang div:first-child p:first-child {
-    margin-bottom: 0.3rem;
-    font-size: 1.2rem;
-    font-weight: bold;
+.section3 .section3-wrapper .parent2 > div .lang h6{
+    font-size: 1rem;
+    font-family: "Outfit" , sans-serif;
     color: var(--font-color-primary);
+    margin-bottom: 0.3rem;
 }
-
-.section3 .section3-wrapper .parent2>div .lang div:first-child p:last-child {
+.section3 .section3-wrapper .parent2 > div .lang div:first-child p:last-child {
     color: var(--font-color-quinary);
 }
-
-.section3 .section3-wrapper .parent2>div .lang div:last-child p {
+.section3 .section3-wrapper .parent2 > div .lang div:last-child h6 {
     color: var(--font-color-secondary);
 }
-
-.section3 .section3-wrapper .parent2>div .info {
+.section3 .section3-wrapper .parent2 > div .info {
     display: flex;
     gap: 1rem;
 }
-
-.section3 .section3-wrapper .parent2>div .info p {
+.section3 .section3-wrapper .parent2 > div .info p {
     display: inline-block;
-    font-size: 0.9rem;
     padding: 0.3rem 0.5rem;
     border: 1px solid var(--border);
     border-radius: 2rem;
-    color: var(--font-color-quinary);
+    color: var(--font-color-primary);
+    font-size: 0.8rem;
+    font-weight: 600;
 }
-
-.section3 .section3-wrapper .parent2>div:hover {
+.section3 .section3-wrapper .parent2 > div:hover {
     background-color: var(--font-color-quaternary);
     transform: translateY(-5px);
     border: 1px solid var(--font-color-secondary);
 }
-
-.section3 .section3-wrapper .parent2>div:hover .info p {
+.section3 .section3-wrapper .parent2 > div:hover .info p {
     border: 1px solid var(--font-color-secondary);
 }
-
 .section3 .section3-wrapper .parent3 {
+    padding-top: 1.5rem;
     text-align: center;
     color: var(--font-color-quaternary);
-    margin-bottom: 5rem;
 }
-
 .section4 {
     background-color: var(--bg-secondary);
-    font-family: sans-serif;
 }
-
+.section4 h3, .section4 p {
+    font-family: sans-serif , serif;
+}
 .section4 .section4-wrapper {
-    padding: clamp(2.25rem, 10vw, 7rem) clamp(4rem, 16vw, 14rem);
+    padding: clamp(2.25rem, 14vw - 4rem, 10rem) clamp(4rem, 16vw - 4rem, 12rem);
+    margin-bottom: clamp(2.5rem, 13vw - 4vw, 9rem);
 }
-
 .section4 .section4-wrapper .parent1 {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .section4 .section4-wrapper .parent1 p:first-child {
     color: var(--font-color-secondary);
     margin-bottom: 1rem;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
-
 .section4 .section4-wrapper .parent1 h3 {
     color: var(--font-color-primary);
     font-size: clamp(1.5rem, 3.75vw, 3rem);
     margin-bottom: 1rem;
 }
-
 .section4 .section4-wrapper .parent1 p:last-child {
     color: var(--font-color-quinary);
     margin-bottom: 4rem;
     max-width: 650px;
 }
-
 .section4 .section4-wrapper .parent2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.8rem;
 }
-
 .section4 .section4-wrapper .parent2 .child {
     display: flex;
     flex-direction: column;
@@ -502,12 +449,10 @@ header nav .cta .burger svg {
     position: relative;
     z-index: 100;
 }
-
 .section4 .section4-wrapper .parent2 .child p:last-child {
     text-align: center;
     line-height: 1.6;
 }
-
 .section4 .section4-wrapper .parent2 .child .icon {
     width: 5rem;
     height: 5rem;
@@ -518,11 +463,9 @@ header nav .cta .burger svg {
     border: 1px solid var(--border);
     border-radius: 16px;
 }
-
 .section4 .section4-wrapper .parent2 .child .icon svg {
     color: var(--font-color-secondary);
 }
-
 .section4 .section4-wrapper .parent2 .child .nn {
     width: 32px;
     height: 32px;
@@ -534,15 +477,12 @@ header nav .cta .burger svg {
     border-radius: 50%;
     color: var(--font-color-quinary);
 }
-
 .section4 .section4-wrapper .parent2 .child h3 {
     color: var(--font-color-primary);
 }
-
 .section4 .section4-wrapper .parent2 .child p:last-child {
     color: var(--font-color-quinary);
 }
-
 .section4 .section4-wrapper .parent2 .child:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -553,41 +493,39 @@ header nav .cta .burger svg {
     background: var(--border);
     z-index: -1;
 }
-
 .section5 .section5-wrapper {
-    margin: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 9.5vw);
+    margin: 0 clamp(1.25rem, 8.5vw - 2.5rem, 10.5rem);
+    margin-bottom: clamp(2.5rem, 13vw - 4vw, 9rem);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
-
 .section5 .section5-wrapper .parent1 {
     position: sticky;
-    top: 0;
+    top: 9rem;
+    align-self: flex-start;
 }
-
 .section5 .section5-wrapper .parent1 p:first-child {
     color: var(--font-color-secondary);
     margin-bottom: 1rem;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
-
 .section5 .section5-wrapper .parent1 h3 {
     font-size: 2.5rem;
     color: var(--font-color-primary);
     margin-bottom: 1rem;
     max-width: 270px;
 }
-
 .section5 .section5-wrapper .parent1 h3 span {
     color: var(--font-color-secondary);
 }
-
 .section5 .section5-wrapper .parent1 p:nth-child(3) {
     color: var(--font-color-quinary);
     font-size: 1.1rem;
     margin-bottom: 2rem;
 }
-
 .section5 .section5-wrapper .parent1 a {
     display: flex;
     justify-content: center;
@@ -600,27 +538,24 @@ header nav .cta .burger svg {
     width: 256px;
     height: 40px;
     transition: .3s all ease;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
-
 .section5 .section5-wrapper .parent1 a svg {
     width: 1rem;
 }
-
 .section5 .section5-wrapper .parent1 a:hover {
     transform: scale(1.03);
 }
-
 .section5 .section5-wrapper .parent1 a:hover svg {
     transform: translate(2px, -2px);
 }
-
 .section5 .section5-wrapper .parent2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
-
-.section5 .section5-wrapper .parent2>div {
+.section5 .section5-wrapper .parent2 > div {
     background-color: var(--bg-secondary);
     border: 1px solid var(--border);
     border-radius: 1rem;
@@ -630,8 +565,7 @@ header nav .cta .burger svg {
     gap: 1rem;
     transition: .3s all ease;
 }
-
-.section5 .section5-wrapper .parent2>div .img-wrapper {
+.section5 .section5-wrapper .parent2 > div .img-wrapper {
     width: 50px;
     height: 50px;
     display: flex;
@@ -640,77 +574,69 @@ header nav .cta .burger svg {
     background-color: var(--bg-tertiary);
     border-radius: 1rem;
 }
-
-.section5 .section5-wrapper .parent2>div .img-wrapper svg {
+.section5 .section5-wrapper .parent2 > div .img-wrapper svg {
     color: var(--font-color-secondary);
 }
-
-.section5 .section5-wrapper .parent2>div h3 {
+.section5 .section5-wrapper .parent2 > div h3 {
     color: var(--font-color-primary);
 }
-
-.section5 .section5-wrapper .parent2>div p {
+.section5 .section5-wrapper .parent2 > div p {
     color: var(--font-color-quinary);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
-
-.section5 .section5-wrapper .parent2>div:hover {
+.section5 .section5-wrapper .parent2 > div:hover {
     transform: scale(1.05) translateY(-5px);
     border: 1px solid var(--font-color-secondary);
 }
-
-.section5 .section5-wrapper .parent2>div:hover .img-wrapper svg {
+.section5 .section5-wrapper .parent2 > div:hover .img-wrapper svg {
     color: var(--font-color-tertiary);
 }
-
-.section5 .section5-wrapper .parent2>div:hover div:has(svg) {
+.section5 .section5-wrapper .parent2 > div:hover div:has(svg) {
     background-color: var(--font-color-secondary);
 }
-
 .section6 {
     background-color: var(--bg-tertiary);
-    padding: clamp(5rem, 12vw, 10rem) 0;
+    padding: clamp(5rem, 12vw, 10rem) clamp(1.25rem, 8.5vw, 10.5rem);
 }
-
 .section6 .section6-wrapper {
-    margin: 0 clamp(1rem, 5vw, 9.5rem);
+    padding: 1rem 0;
     background-color: var(--bg-secondary);
-    border-radius: 1rem;
+    border-radius: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid var(--border);
 }
-
 .section6 .section6-wrapper div {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: clamp(3rem, 8vw, 6rem) 0;
 }
-
 .section6 .section6-wrapper div p:first-child {
     color: var(--font-color-secondary);
-    margin-bottom: 2.3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
-
 .section6 .section6-wrapper div h3 {
     color: var(--font-color-primary);
     font-size: 2.5rem;
     text-align: center;
 }
-
 .section6 .section6-wrapper div h3:nth-child(3) {
     color: var(--font-color-secondary);
     margin-bottom: 1.7rem;
 }
-
 .section6 .section6-wrapper div p:nth-child(4) {
     text-align: center;
     color: var(--font-color-quinary);
     margin-bottom: 2.8rem;
     max-width: 500px;
 }
-
-.section6 .section6-wrapper div>a {
+.section6 .section6-wrapper div > a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -723,180 +649,152 @@ header nav .cta .burger svg {
     height: 43px;
     transition: .2s all ease;
     margin-bottom: 1.7rem;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
-
-.section6 .section6-wrapper div>a svg {
+.section6 .section6-wrapper div > a svg {
     width: 1rem;
     transition: .2s all ease;
 }
-
-.section6 .section6-wrapper div>a:hover svg {
+.section6 .section6-wrapper div > a:hover svg {
     transform: translateX(2px);
 }
-
 .section6 .section6-wrapper div p:last-child {
     color: var(--font-color-quinary);
+    font-size: 0.75rem;
 }
-
 .section6 .section6-wrapper div p:last-child a {
     color: var(--font-color-quinary);
     font-weight: bold;
 }
-
 footer .footer-wrapper {
-    margin: clamp(3rem, 7vw, 5rem) clamp(1rem, 5vw, 9.5vw);
+    margin: clamp(3rem, 7vw, 5rem) clamp(1.25rem, 8.5vw - 2.5rem, 10.5rem);
 }
-
 footer .footer-wrapper .parent1 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-bottom: clamp(2rem, 6vw, 4rem);
 }
-footer .footer-wrapper .parent1 div:first-child {
+footer .footer-wrapper .parent1 div:first-child img{
     filter: invert(1);
 }
-footer .footer-wrapper .parent1 div>img {
+footer .footer-wrapper .parent1 div > img {
     width: clamp(8rem, 20vw, 16rem);
 }
-
-footer .footer-wrapper .parent1>div:first-child {
+footer .footer-wrapper .parent1 > div:first-child {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
-footer .footer-wrapper .parent1>div:first-child p {
+footer .footer-wrapper .parent1 > div:first-child p {
     color: var(--font-color-quinary);
-    font-size: 0.96rem;
+    max-width: 400px;
+    line-height: 1.5;
+    font-size: 0.9rem;
 }
-
-footer .footer-wrapper .parent1>div:last-child {
+footer .footer-wrapper .parent1 > div:last-child {
     display: flex;
     justify-content: space-around;
 }
-
-footer .footer-wrapper .parent1>div:last-child p {
+footer .footer-wrapper .parent1 > div:last-child .links p {
     color: var(--font-color-secondary);
     margin-bottom: 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
 }
-
-footer .footer-wrapper .parent1>div:last-child ul {
+footer .footer-wrapper .parent1 > div:last-child .links ul {
     list-style: none;
 }
-
-footer .footer-wrapper .parent1>div:last-child ul li {
+footer .footer-wrapper .parent1 > div:last-child .links ul li {
     margin-bottom: 1rem;
 }
-
-footer .footer-wrapper .parent1>div:last-child ul a {
+footer .footer-wrapper .parent1 > div:last-child .links ul a {
     text-decoration: none;
     color: var(--font-color-quinary);
-    font-size: 1rem;
+    font-size: 0.85rem;
 }
-
-footer .footer-wrapper .parent1>div:last-child ul a:has(svg) {
+footer .footer-wrapper .parent1 > div:last-child ul a:has(svg) {
     display: flex;
     align-items: center;
     gap: 0.2rem;
     text-decoration: none;
     color: var(--font-color-quinary);
 }
-
-footer .footer-wrapper .parent1>div:last-child ul a:has(svg) svg {
-    width: 1.1rem;
-    transform: translateY(-2px);
+footer .footer-wrapper .parent1 > div:last-child .links ul a:has(svg) svg {
+    width: 0.8rem;
 }
-
-footer .footer-wrapper .parent1>div:last-child ul a:hover {
+footer .footer-wrapper .parent1 > div:last-child ul a:hover {
     color: var(--font-color-primary);
 }
-
 footer .footer-wrapper .parent2 {
     padding-top: 2rem;
     border-top: 1px solid var(--border);
     display: flex;
     justify-content: space-between;
 }
-
 footer .footer-wrapper .parent2 p {
     color: var(--font-color-quinary);
+    font-size: 0.8rem;
 }
-
 footer .footer-wrapper .parent2 p a {
     text-decoration: none;
     color: var(--font-color-primary);
 }
-
 footer .footer-wrapper .parent2 p a:hover {
     color: var(--font-color-secondary);
 }
-
 @media (max-width: 1023px) {
     header nav .links {
         display: none;
     }
-
     header nav .cta .dd {
         display: none;
     }
-
     header nav .cta .burger {
         display: flex;
         justify-content: center;
     }
-
     .section1 .section1-wrapper {
         grid-template-columns: 1fr;
     }
-
     .section1 .section1-wrapper .parent2 .animation {
         display: none;
     }
-
     .section2 .section2-wrapper .parent2 {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-
     .section3 .section3-wrapper .parent2 {
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
     }
-
     .section4 .section4-wrapper .parent2 {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
-
     .section4 .section4-wrapper .parent2 .child:not(:last-child)::after {
         display: none;
     }
-
     .section5 .section5-wrapper {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-
     .section5 .section5-wrapper .parent1 {
         position: static;
     }
-
     .section5 .section5-wrapper .parent2 {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-
     footer .footer-wrapper .parent1 {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-
-    footer .footer-wrapper .parent1>div:last-child {
+    footer .footer-wrapper .parent1 > div:last-child {
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
-
     footer .footer-wrapper .parent2 {
         display: flex;
         flex-direction: column;
@@ -904,18 +802,14 @@ footer .footer-wrapper .parent2 p a:hover {
         gap: 1rem;
     }
 }
-
 @media (max-width: 639px) {
     .section3 .section3-wrapper .parent2 {
         grid-template-columns: 1fr;
     }
-
     .section4 .section4-wrapper .parent2 {
         grid-template-columns: 1fr;
     }
-
 }
-
 @media (max-width: 456px) {
     .section1 .section1-wrapper .parent1 .c2 ul {
         display: flex;
