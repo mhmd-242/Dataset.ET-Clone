@@ -43,8 +43,9 @@ header nav {
     border: 0.5px solid var(--border);
     border-radius: 200px;
     padding: 0.8rem 1.5rem;
-    background-color: var(--bg-primary);
-    opacity: 0.97;
+    background-color: rgba(10, 10, 15, 0.5);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
 }
 header nav .logo {
     filter: invert(1);
@@ -308,7 +309,7 @@ header nav .hamburger-menu ul li a:hover {
 }
 .section2 .section2-wrapper{
     margin: 0 clamp(1.5rem, 10vw - 0.7rem, 9rem);
-    margin-bottom: clamp(2.5rem, 22vw - 4vw, 20rem);
+    margin-bottom: clamp(1.25rem, 11vw - 2vw, 10rem);
 }
 .section2 .section2-wrapper .parent1 {
     margin: 2rem 0;
@@ -384,9 +385,23 @@ header nav .hamburger-menu ul li a:hover {
     color: var(--font-color-secondary);
     font-family: "Outfit" , sans-serif;
 }
+.section3 {
+    position: relative;
+}
+.section3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -100;
+    background: radial-gradient(circle, var(--font-color-secondary) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(ellipse at center, var(--bg-primary) 30% , transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, var(--bg-primary) 30%, transparent 75%);
+}
 .section3 .section3-wrapper{
     margin: 0 clamp(1.5rem, 10vw - 0.7rem, 9rem);
-    margin-bottom: clamp(2.5rem, 14vw - 4vw, 14rem);
+    padding-top: clamp(1.25rem, 9vw , 10rem);
+    padding-bottom: clamp(2.5rem, 10vw , 10rem);
 }
 .section3 .section3-wrapper .parent1 {
     display: flex;
@@ -470,7 +485,10 @@ header nav .hamburger-menu ul li a:hover {
 .section3 .section3-wrapper .parent3 {
     padding-top: 1.5rem;
     text-align: center;
-    color: var(--font-color-quaternary);
+    color: var(--font-color-quinary);
+}
+.section3 .section3-wrapper .parent3 p {
+    font-size: 0.85rem;
 }
 .section4 {
     background-color: var(--bg-secondary);
@@ -556,8 +574,8 @@ header nav .hamburger-menu ul li a:hover {
     content: "";
     position: absolute;
     top: 32px;
-    right: -120px;
-    width: 220px;
+    right: -140px;
+    width: 260px;
     height: 1px;
     background: var(--border);
     z-index: -1;
@@ -655,7 +673,7 @@ header nav .hamburger-menu ul li a:hover {
     line-height: 1.5;
 }
 .section5 .section5-wrapper .parent2 > div:hover {
-    transform: scaleY(1.02) translateY(-5px);
+    transform: scale(1.02) translateY(-5px);
     border: 1px solid var(--font-color-secondary);
 }
 .section5 .section5-wrapper .parent2 > div:hover .img-wrapper svg {
@@ -746,14 +764,13 @@ footer .footer-wrapper .parent1 {
 }
 footer .footer-wrapper .parent1 div:first-child img{
     filter: invert(1);
-}
-footer .footer-wrapper .parent1 div > img {
     width: clamp(8rem, 11vw + 5.6rem, 16rem);
 }
 footer .footer-wrapper .parent1 > div:first-child {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1rem;
 }
 footer .footer-wrapper .parent1 > div:first-child p {
     color: var(--font-color-quinary);
@@ -764,10 +781,11 @@ footer .footer-wrapper .parent1 > div:first-child p {
 footer .footer-wrapper .parent1 > div:last-child {
     display: flex;
     justify-content: space-around;
+    gap: 1rem;
 }
 footer .footer-wrapper .parent1 > div:last-child .links p {
     color: var(--font-color-secondary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
     font-size: 0.75rem;
     letter-spacing: 1.5px;
 }
@@ -775,7 +793,7 @@ footer .footer-wrapper .parent1 > div:last-child .links ul {
     list-style: none;
 }
 footer .footer-wrapper .parent1 > div:last-child .links ul li {
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
 }
 footer .footer-wrapper .parent1 > div:last-child .links ul a {
     text-decoration: none;
@@ -857,12 +875,12 @@ footer .footer-wrapper .parent2 p a:hover {
     }
     footer .footer-wrapper .parent1 {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 4rem;
     }
     footer .footer-wrapper .parent1 > div:last-child {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.2rem;
     }
     footer .footer-wrapper .parent2 {
         display: flex;
@@ -888,5 +906,9 @@ footer .footer-wrapper .parent2 p a:hover {
     }
     .section6 .section6-wrapper {
         padding: 0 2rem;
+    }
+    .section6 .section6-wrapper div p:last-child {
+        max-width: 200px;
+        text-align: center;
     }
 }
