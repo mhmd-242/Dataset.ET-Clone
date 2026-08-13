@@ -17,7 +17,6 @@
 }
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 7rem;
 }
 body {
     background-color: var(--bg-primary);
@@ -92,31 +91,56 @@ header nav .cta > a:first-child:hover {
     color: var(--font-color-secondary);
 }
 header nav .cta .mode {
+    color: var(--font-color-primary);
     height: 2.2rem;
     width: 2.2rem;
     background-color: var(--bg-secondary);
     border: 1px solid var(--border);
     border-radius: 9px;
-}
-header nav .cta .mode a {
-    color: var(--font-color-primary);
-    display: inline-block;
-    width: inherit;
-    height: inherit;
-    border-radius: 9px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
 }
 header nav .cta .mode svg {
     width: 1rem;
 }
+header nav .cta .mode .sun {
+    display: none;
+}
 header nav .cta .mode:hover {
     background-color: var(--bg-tertiary);
 }
-header nav .cta .mode a:focus-visible {
-    outline: 2px solid var(--font-color-secondary);
+header nav .cta .mode:focus-visible {
+    outline: 3px solid var(--font-color-secondary);
     outline-offset: 0;
+    color: var(--font-color-secondary);
+}
+header nav .cta .mode .mode-change {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    width: 130px;
+    background-color: var(--bg-tertiary);
+    border-radius: 9px;
+    padding: 0.3rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    border: 1px solid var(--border);
+}
+header nav .cta .mode .mode-change p {
+    display: inline-block;
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 5px;
+    font-size: 0.92rem;
+    text-align: left;
+}
+header nav .cta .mode .mode-change p:hover {
+    background-color: var(--bg-quaternary);
 }
 header nav .cta .dd a {
     height: 2.5rem;
@@ -141,12 +165,19 @@ header nav .cta .dd a svg {
 header nav .cta .dd a:hover svg {
     transform: translate(2px, -2px);
 }
-header nav .cta .burger , header nav .cta .x {
+header nav .cta .menu-toggles {
     color: var(--font-color-primary);
     display: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
-header nav .cta .burger svg , header nav .cta .x svg {
+header nav .cta .menu-toggles svg {
     width: 2rem;
+}
+header nav .cta .menu-toggles .menu-close {
+    display: none;
 }
 header nav .hamburger-menu {
     margin: 0 clamp(1.5rem, 10vw - 0.7rem, 9rem);
@@ -340,6 +371,11 @@ header nav .hamburger-menu ul li a:hover {
     font-size: 0.9rem;
     font-weight: 600;
 }
+.section1 .section1-wrapper .parent1 .c2 ul li a:focus-visible {
+    outline: 2px solid var(--font-color-primary);
+    outline-offset: 0;
+    border: none;
+}
 .section1 .section1-wrapper .parent1 .c2 ul li:first-child a svg {
     width: 1rem;
     transition: all .3s ease;
@@ -387,6 +423,9 @@ header nav .hamburger-menu ul li a:hover {
 .section1 .section1-wrapper .parent2 .animation video {
     width: min(680px, 52vw);
     object-fit: contain;
+}
+.section2 {
+    scroll-margin-top: clamp(7rem, 4vw + 6rem, 11rem);
 }
 .section2 .section2-wrapper{
     margin: 0 clamp(1.5rem, 10vw - 0.7rem, 9rem);
@@ -486,6 +525,7 @@ header nav .hamburger-menu ul li a:hover {
 }
 .section3 {
     position: relative;
+    scroll-margin-top: clamp(2rem, 1.5vw + 1.5rem, 3.5rem);
 }
 .section3::before {
     content: "";
@@ -618,6 +658,7 @@ header nav .hamburger-menu ul li a:hover {
 }
 .section4 {
     background-color: var(--bg-secondary);
+    scroll-margin-top: clamp(2rem, 1.5vw + 1.5rem, 3.5rem);
 }
 .section4 h3, .section4 p {
     font-family: sans-serif , serif;
@@ -721,6 +762,9 @@ header nav .hamburger-menu ul li a:hover {
     background: var(--border);
     z-index: 10;
 }
+.section5 {
+    scroll-margin-top: clamp(7rem, 4vw + 6rem, 11rem);
+}
 .section5 .section5-wrapper {
     margin: 0 clamp(1.5rem, 10vw - 0.7rem, 9rem);
     margin-bottom: clamp(2.5rem, 13vw - 4vw, 9rem);
@@ -779,6 +823,11 @@ header nav .hamburger-menu ul li a:hover {
     transition: all .3s ease;
     font-size: 0.9rem;
     font-weight: 600;
+}
+.section5 .section5-wrapper .parent1 a:focus-visible {
+    outline: 2px solid var(--font-color-primary);
+    outline-offset: 0;
+    border: none;
 }
 .section5 .section5-wrapper .parent1 a svg {
     width: 1rem;
@@ -899,6 +948,11 @@ header nav .hamburger-menu ul li a:hover {
 .section6 .section6-wrapper div > a:hover svg {
     transform: translateX(2px);
 }
+.section6 .section6-wrapper div > a:focus-visible {
+    outline: 2px solid var(--font-color-primary);
+    outline-offset: 0;
+    border: none;
+}
 .section6 .section6-wrapper div p:last-child {
     color: var(--font-color-quinary);
     font-size: 0.75rem;
@@ -954,7 +1008,8 @@ footer .footer-wrapper .parent1 > div:last-child .links ul a {
     font-size: 0.85rem;
 }
 footer .footer-wrapper .parent1 > div:last-child ul a:has(svg) {
-    display: flex;
+    display: inline-flex;
+    justify-content: space-between;
     align-items: center;
     gap: 0.2rem;
     text-decoration: none;
@@ -982,6 +1037,9 @@ footer .footer-wrapper .parent2 p a {
 }
 footer .footer-wrapper .parent2 p a:hover {
     color: var(--font-color-secondary);
+}
+footer a {
+    border-radius: 2px;
 }
 @media (prefers-reduced-motion: no-preference) {
     .section1 .section1-wrapper .parent1 .c1 h1 .word-cycler span {
@@ -1033,9 +1091,10 @@ footer .footer-wrapper .parent2 p a:hover {
     header nav .cta .dd {
         display: none;
     }
-    header nav .cta .burger {
+    header nav .cta .menu-toggles {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 }
 @media (max-width: 1023px) {

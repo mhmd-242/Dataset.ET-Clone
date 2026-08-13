@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="Assets/flavicon.png">
+    <link rel="icon" href="Assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <title>Dataset.ET Clone</title>
+    <meta name="description" content="Dataset.ET - The Open Language Corpus for Ethiopia">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="#">
+                <a href="https://dataset-et-clone.vercel.app/">
                     <img src="Assets/logo.png" alt="Dataset.ET">
                 </a>
             </div>
@@ -24,24 +25,34 @@
                     <li><a href="#languages">Languages</a></li>
                     <li><a href="#howitworks">How it Works</a></li>
                     <li><a href="#community">Community</a></li>
-                    <li><a href="#">Dataset</a></li>
+                    <li><a href="https://dataset-et-clone.vercel.app/">Dataset</a></li>
                 </ul>
             </div>
             <div class="cta">
                 <a href="#" class="dd">Privacy</a>
-                <div class="mode">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path
-                                d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401">
-                            </path>
-                        </svg>
-                    </a>
-                </div>
+                <button class="mode" aria-label="Toggle dark mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon" aria-hidden="true">
+                        <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.41 1.41"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg>
+                    <div class="mode-change">
+                        <p>Light</p>
+                        <p>Dark</p>
+                        <p>System</p>
+                    </div>
+                </button>
                 <div class="dd">
-                    <a href="#">
+                    <a href="https://dataset-et-clone.vercel.app/">
                         <p>Contribute</p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -51,22 +62,20 @@
                         </svg>
                     </a>
                 </div>
-                <div class="burger">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <button class="menu-toggles" aria-label="Toggle menu" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="menu-open" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         aria-hidden="true">
                         <path d="M4 5h16"></path>
                         <path d="M4 12h16"></path>
                         <path d="M4 19h16"></path>
                     </svg>
-                </div>
-                <div class="x">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="menu-close" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M18 6 6 18"/>
                         <path d="m6 6 12 12"/>
                     </svg>
-                </div>
+                </button>
             </div>
             <div class="hamburger-menu">
                 <div>
@@ -75,14 +84,14 @@
                         <li><a href="#languages">Languages</a></li>
                         <li><a href="#howitworks">How it Works</a></li>
                         <li><a href="#community">Community</a></li>
-                        <li><a href="#">Dataset</a></li>
+                        <li><a href="https://dataset-et-clone.vercel.app/">Dataset</a></li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="https://dataset-et-clone.vercel.app/">Privacy Policy</a></li>
                         <li>
-                            <a href="#">Contribute
+                            <a href="https://dataset-et-clone.vercel.app/">Contribute
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                     aria-hidden="true">
@@ -120,7 +129,7 @@
                 <div class="c2">
                     <ul>
                         <li>
-                            <a href="#">Start Contributing
+                            <a href="https://dataset-et-clone.vercel.app/">Start Contributing
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" aria-hidden="true">
@@ -129,7 +138,7 @@
                                 </svg>
                             </a>
                         </li>
-                        <li><a href="#">Explore the Mission</a></li>
+                        <li><a href="https://dataset-et-clone.vercel.app/">Explore the Mission</a></li>
                     </ul>
                 </div>
                 <div class="c3">
@@ -145,7 +154,7 @@
             </div>
             <div class="parent2">
                 <div class="animation">
-                    <video src="Assets/hero-orb.mp4" autoplay loop muted></video>
+                    <video src="Assets/hero-orb.mp4" autoplay loop muted playsinline></video>
                 </div>
             </div>
         </div>
@@ -420,7 +429,7 @@
                 <p>Volunteers, researchers, linguists, and developers who believe in the power of
                     language technology for Ethiopia.
                 </p>
-                <a href="#">Join our Telegram Group
+                <a href="https://dataset-et-clone.vercel.app/">Join our Telegram Group
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         aria-hidden="true">
@@ -502,7 +511,7 @@
                 <p>Every sentence you contribute builds the open infrastructure
                     that will power Ethiopian AI for generations. No technical skill required.
                 </p>
-                <a href="#">Start Contributing Now
+                <a href="https://dataset-et-clone.vercel.app/">Start Contributing Now
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         aria-hidden="true">
@@ -510,7 +519,7 @@
                         <path d="m12 5 7 7-7 7"></path>
                     </svg>
                 </a>
-                <p>By contributing, you agree to our <a href="#">Privacy Policy</a></p>
+                <p>By contributing, you agree to our <a href="https://dataset-et-clone.vercel.app/">Privacy Policy</a></p>
             </div>
         </div>
     </section>
@@ -529,17 +538,17 @@
                     <div class="links">
                         <p>PROJECT</p>
                         <ul>
-                            <li><a href="mission">Mission</a></li>
-                            <li><a href="languages">Languages</a></li>
-                            <li><a href="howitworks">How It Works</a></li>
-                            <li><a href="#">Research(Coming Soon)</a></li>
+                            <li><a href="#mission">Mission</a></li>
+                            <li><a href="#languages">Languages</a></li>
+                            <li><a href="#howitworks">How It Works</a></li>
+                            <li><a href="https://dataset-et-clone.vercel.app/">Research(Coming Soon)</a></li>
                         </ul>
                     </div>
                     <div class="links">
                         <p>COMMUNITY</p>
                         <ul>
-                            <li><a href="#">Contribute</a></li>
-                            <li><a href="#">Telegram
+                            <li><a href="https://dataset-et-clone.vercel.app/">Contribute</a></li>
+                            <li><a href="https://dataset-et-clone.vercel.app/">Telegram
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" aria-hidden="true">
@@ -552,14 +561,14 @@
                     <div class="links">
                         <p>RESOURCES</p>
                         <ul>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="https://dataset-et-clone.vercel.app/">Privacy Policy</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="parent2">
                 <p>2026 Dataset.ET</p>
-                <p>Managed by <a href="#">Snapwre</a>.</p>
+                <p>Managed by <a href="https://dataset-et-clone.vercel.app/">Snapwre</a>.</p>
                 <p>Built with love for Ethiopian languages.</p>
             </div>
         </div>
