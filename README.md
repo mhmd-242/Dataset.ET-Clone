@@ -19,9 +19,9 @@ This project is built purely for **learning and practice** recreating the UI of 
 dataset.et-clone/
 ├── Assets/          # Logo image, hero section video and favicon
 ├── Designs/         # Reference screenshots (desktop, tablet, mobile)
-├── index.html       # Main HTML file
+├── README.md
 ├── index.css        # Stylesheet
-└── README.md
+└── index.html       # Main HTML file
 ```
 
 ## License
